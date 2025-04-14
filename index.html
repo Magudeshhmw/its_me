@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meyawo Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #c2c2eb, #ffffff);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: calc(100% - 80px);
+            box-sizing: border-box;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #6a5acd;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: black;
+            opacity: 0;
+            animation: textFadeIn 2s forwards 1s;
+        }
+
+        h2 {
+            font-size: 50px;
+            font-weight: 700;
+            color: black;
+            opacity: 0;
+            animation: textFadeIn 2s forwards 2s;
+        }
+
+        p {
+            font-size: 16px;
+            letter-spacing: 2px;
+            font-weight: 300;
+            color: black;
+            margin-top: 10px;
+            opacity: 0;
+            animation: textFadeIn 2s forwards 3s;
+        }
+
+        .button {
+            display: inline-block;
+            background: #6a5acd;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+            opacity: 0;
+            animation: textFadeIn 2s forwards 4s;
+        }
+
+        .button:hover {
+            background: #483d8b;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes textFadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Its Me <b>HMW</b></h1>
+    </div>
+    <div class="container">
+        <h1>HI!</h1>
+        <h2>I am Magudesh</h2>
+        <p>MACHINE LEARNING DEPLOYMENT</p>
+        <a href="./page1.html" class="button">Visit My Works</a>
+    </div>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show-menu');
+        }
+    </script>
+</body>
+</html>
