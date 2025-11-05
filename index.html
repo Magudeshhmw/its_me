@@ -943,6 +943,67 @@
                 padding: 1rem;
             }
         }
+
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 100; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: var(--slate-800);
+          margin: 10% auto; /* 10% from the top and centered */
+          padding: 2rem;
+          border: 1px solid var(--slate-700);
+          width: 80%; /* Could be more or less, depending on screen size */
+          max-width: 900px;
+          color: var(--slate-300);
+          border-radius: 1rem;
+          position: relative;
+        }
+
+        /* The Close Button */
+        .close {
+          color: #aaa;
+          position: absolute;
+          top: 1rem;
+          right: 1.5rem;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -1206,7 +1267,17 @@
             </div>
 
             <div class="projects-grid fade-in">
-                <div class="project-card">
+                <div class="project-card" style="cursor: pointer;"
+                     data-title="🧠 PentAIGen – AI Multi-Agent Financial Operating System"
+                     data-video-id="ojxOviKnjP4"
+                     data-description="Developed an enterprise-grade multi-agent financial system acting as a personal AI CFO. The system integrates 12+ agents such as Wealth Strategist, Tax Optimizer, and Risk Watchdog to provide real-time financial insights and automation."
+                     data-details='[
+                        "Enabled 95% automated financial analysis and 60% time reduction in manual data review",
+                        "Integrated Tiingo API for real-time stock visualization and portfolio insights",
+                        "Designed secure API key–based conversational layer for personalized chat interactions",
+                        "Supported multi-platform access (web, WhatsApp, voice) with human-like reasoning agents"
+                     ]'
+                     data-preview-url="https://magudeshhmw.github.io/PentAiGen/">
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="PentAIGen">
                     <div class="project-content">
                         <h3 style="color: var(--primary-400); margin-bottom: 1rem;">🧠 PentAIGen – AI Multi-Agent Financial Operating System</h3>
@@ -1224,7 +1295,12 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" style="cursor: pointer;"
+                     data-title="⚖️ Seran IngoiLe – Legal Snapics"
+                     data-video-id=""
+                     data-description="AI-powered legal assistant for contract analysis using multi-agent reasoning. Automated 70% of manual contract review with clause intelligence, risk detection, and compliance scoring. Features secure API-based chat for document Q&A."
+                     data-details='[]'
+                     data-preview-url="">
                     <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Seran IngoiLe">
                     <div class="project-content">
                         <h3 style="color: var(--primary-400); margin-bottom: 1rem;">⚖️ Seran IngoiLe – Legal Snapics</h3>
@@ -1242,7 +1318,12 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" style="cursor: pointer;"
+                     data-title="💬 AI Chatbot Builder"
+                     data-video-id=""
+                     data-description="Advanced conversational AI platform with API key-based authentication. Delivers intelligent, real-time responses through natural language understanding and context-aware interactions."
+                     data-details='[]'
+                     data-preview-url="">
                     <img src="ai.jpg" alt="AI Chatbot Builder">
                     <div class="project-content">
                         <h3 style="color: var(--primary-400); margin-bottom: 1rem;">💬 AI Chatbot Builder</h3>
@@ -1258,7 +1339,12 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" style="cursor: pointer;"
+                     data-title="💹 Stock Price Predictor (LSTM & ARIMA)"
+                     data-video-id=""
+                     data-description="Advanced time-series forecasting system achieving 78% prediction accuracy. Features interactive data dashboard with trend visualization and pattern recognition for informed investment decisions."
+                     data-details='[]'
+                     data-preview-url="">
                     <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Stock Price Predictor">
                     <div class="project-content">
                         <h3 style="color: var(--primary-400); margin-bottom: 1rem;">💹 Stock Price Predictor (LSTM & ARIMA)</h3>
@@ -1274,7 +1360,12 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" style="cursor: pointer;"
+                     data-title="💬 Sentiment Analyzer"
+                     data-video-id=""
+                     data-description="NLP-powered sentiment analysis tool for product and customer reviews. Utilizes TF-IDF vectorization and Naive Bayes classification to extract actionable insights from text data."
+                     data-details='[]'
+                     data-preview-url="">
                     <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Sentiment Analyzer">
                     <div class="project-content">
                         <h3 style="color: var(--primary-400); margin-bottom: 1rem;">💬 Sentiment Analyzer</h3>
@@ -1290,7 +1381,12 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" style="cursor: pointer;"
+                     data-title="🛍️ Sri Sai Cottage Industries"
+                     data-video-id=""
+                     data-description="Full-stack e-commerce platform for traditional pooja products. Features responsive design, secure payment gateway integration, and comprehensive product management system."
+                     data-details='[]'
+                     data-preview-url="">
                     <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Sri Sai Cottage Industries">
                     <div class="project-content">
                         <h3 style="color: var(--primary-400); margin-bottom: 1rem;">🛍️ Sri Sai Cottage Industries</h3>
@@ -1308,6 +1404,22 @@
             </div>
         </div>
     </section>
+
+    <!-- The Modal -->
+    <div id="project-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modal-title" style="color: var(--primary-400); margin-bottom: 1rem;"></h3>
+        <div id="modal-video-container" class="video-container">
+            <iframe id="modal-video" src="" frameborder="0" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" style="display: none;"></iframe>
+            <p id="video-coming-soon" style="display: none; text-align: center; padding: 5rem 0;">Video Coming Soon</p>
+        </div>
+        <p id="modal-description" style="color: var(--slate-300); margin-bottom: 1rem;"></p>
+        <ul id="modal-details"></ul>
+        <a id="modal-preview-link" href="#" class="btn btn-primary" style="margin-top: 1.5rem;" target="_blank" rel="noopener noreferrer">Preview</a>
+      </div>
+    </div>
 
     <!-- Achievements Section -->
     <section id="achievements">
@@ -2150,10 +2262,84 @@
             initScrollAnimations();
             initNavigation();
             initBackToTop();
-            initContactForm();
             
             // Add scroll listener for progress bar
             window.addEventListener('scroll', debounce(updateScrollProgress, 10));
+
+            // Modal functionality
+            const projectCards = document.querySelectorAll('.project-card');
+            const modal = document.getElementById('project-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalVideoContainer = document.getElementById('modal-video-container');
+            const modalVideo = document.getElementById('modal-video');
+            const videoComingSoon = document.getElementById('video-coming-soon');
+            const modalDescription = document.getElementById('modal-description');
+            const modalDetails = document.getElementById('modal-details');
+            const modalPreviewLink = document.getElementById('modal-preview-link');
+            const closeModal = document.querySelector('.modal .close');
+
+            projectCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const title = card.dataset.title;
+                    const videoId = card.dataset.videoId;
+                    const description = card.dataset.description;
+                    const details = JSON.parse(card.dataset.details);
+                    const previewUrl = card.dataset.previewUrl;
+
+                    modalTitle.textContent = title;
+                    modalDescription.textContent = description;
+
+                    modalVideoContainer.style.display = 'block';
+                    if (videoId) {
+                        modalVideo.src = `https://www.youtube.com/embed/${videoId}`;
+                        modalVideo.style.display = 'block';
+                        videoComingSoon.style.display = 'none';
+                    } else {
+                        modalVideo.src = '';
+                        modalVideo.style.display = 'none';
+                        videoComingSoon.style.display = 'block';
+                    }
+
+                    modalDetails.innerHTML = '';
+                    if (details && details.length > 0) {
+                        details.forEach(detail => {
+                            const li = document.createElement('li');
+                            li.style.color = 'var(--slate-300)';
+                            li.style.marginBottom = '0.5rem';
+                            li.textContent = detail;
+                            modalDetails.appendChild(li);
+                        });
+                    }
+
+                    modalPreviewLink.style.display = 'inline-block';
+                    if (previewUrl) {
+                        modalPreviewLink.href = previewUrl;
+                        modalPreviewLink.textContent = 'Preview';
+                        modalPreviewLink.style.pointerEvents = 'auto';
+                        modalPreviewLink.style.opacity = '1';
+                    } else {
+                        modalPreviewLink.removeAttribute('href');
+                        modalPreviewLink.textContent = 'Coming Soon';
+                        modalPreviewLink.style.pointerEvents = 'none';
+                        modalPreviewLink.style.opacity = '0.6';
+                    }
+
+                    modal.style.display = 'block';
+                });
+            });
+
+            const closeTheModal = () => {
+                modal.style.display = 'none';
+                modalVideo.src = ''; // Stop video playback
+            }
+
+            closeModal.addEventListener('click', closeTheModal);
+
+            window.addEventListener('click', (event) => {
+                if (event.target == modal) {
+                    closeTheModal();
+                }
+            });
         });
 
         // Handle window resize
