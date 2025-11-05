@@ -943,6 +943,67 @@
                 padding: 1rem;
             }
         }
+
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 100; /* Sit on top */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+          background-color: var(--slate-800);
+          margin: 10% auto; /* 10% from the top and centered */
+          padding: 2rem;
+          border: 1px solid var(--slate-700);
+          width: 80%; /* Could be more or less, depending on screen size */
+          max-width: 900px;
+          color: var(--slate-300);
+          border-radius: 1rem;
+          position: relative;
+        }
+
+        /* The Close Button */
+        .close {
+          color: #aaa;
+          position: absolute;
+          top: 1rem;
+          right: 1.5rem;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin: 1rem 0;
+            border-radius: 0.5rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -1206,12 +1267,12 @@
             </div>
 
             <div class="projects-grid fade-in">
-                <div class="project-card">
+                <div class="project-card" id="pentaigen-card" style="cursor: pointer;">
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="PentAIGen">
                     <div class="project-content">
                         <h3 style="color: var(--primary-400); margin-bottom: 1rem;">🧠 PentAIGen – AI Multi-Agent Financial Operating System</h3>
                         <p style="color: var(--slate-300); margin-bottom: 1rem;">
-                            Enterprise-grade multi-agent financial system with 12+ AI agents including Wealth Strategist, Tax Optimizer, and Risk Watchdog. Provides real-time financial insights and automation with 95% automated analysis and 60% time reduction in manual data review.
+                            Click to see details.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
@@ -1308,6 +1369,28 @@
             </div>
         </div>
     </section>
+
+    <!-- The Modal -->
+    <div id="pentaigen-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 style="color: var(--primary-400); margin-bottom: 1rem;">🧠 PentAIGen – AI Multi-Agent Financial Operating System</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ojxOviKnjP4" frameborder="0" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p style="color: var(--slate-300); margin-bottom: 1rem;">
+            Developed an enterprise-grade multi-agent financial system acting as a personal AI CFO. The system integrates 12+ agents such as Wealth Strategist, Tax Optimizer, and Risk Watchdog to provide real-time financial insights and automation.
+        </p>
+        <ul>
+            <li>Enabled 95% automated financial analysis and 60% time reduction in manual data review</li>
+            <li>Integrated Tiingo API for real-time stock visualization and portfolio insights</li>
+            <li>Designed secure API key–based conversational layer for personalized chat interactions</li>
+            <li>Supported multi-platform access (web, WhatsApp, voice) with human-like reasoning agents</li>
+        </ul>
+        <a href="https://magudeshhmw.github.io/PentAiGen/" class="btn btn-primary" style="margin-top: 1.5rem;" target="_blank" rel="noopener noreferrer">Preview</a>
+      </div>
+    </div>
 
     <!-- Achievements Section -->
     <section id="achievements">
@@ -2154,6 +2237,32 @@
             
             // Add scroll listener for progress bar
             window.addEventListener('scroll', debounce(updateScrollProgress, 10));
+
+            // Get the modal
+            var modal = document.getElementById("pentaigen-modal");
+
+            // Get the button that opens the modal
+            var card = document.getElementById("pentaigen-card");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the card, open the modal
+            card.onclick = function() {
+              modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
         });
 
         // Handle window resize
