@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://magudeshhmw.github.io/its_me/sitemap.xml
