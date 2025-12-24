@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="me.jpg">
+    <title>Project Details - Magudeshwaran (HMW)</title>
+    <meta name="description"
+        content="View comprehensive details about this AI/Data Science project developed by Magudeshwaran.">
+    <meta name="robots" content="index, follow">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-500: #06b6d4;
+            --primary-600: #0891b2;
+            --primary-400: #22d3ee;
+            --secondary-500: #f59e0b;
+            --secondary-600: #d97706;
+            --secondary-400: #fbbf24;
+            --slate-950: #020617;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-300: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--slate-900);
+            background-image: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.1), transparent 70%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav */
+        nav {
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-btn {
+            color: var(--slate-300);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--primary-400);
+        }
+
+        /* Hero */
+        .project-hero {
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .project-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+        }
+
+        .project-tagline {
+            font-size: 1.25rem;
+            color: var(--primary-400);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            height: 500px;
+        }
+
+        .gallery-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .main-img {
+            grid-row: span 2;
+        }
+
+        /* Content */
+        .project-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-500);
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--slate-300);
+        }
+
+        .feature-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-400);
+        }
+
+        .tech-stack-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .tech-pill {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            color: var(--slate-300);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 2rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+        }
+
+        @media (max-width: 768px) {
+
+            .gallery-grid,
+            .project-content {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .main-img {
+                height: 300px;
+            }
+
+            .project-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        </nav>
+
+        <header class="project-hero">
+            <h1 id="p-title" class="project-title">Loading...</h1>
+            <p id="p-tagline" class="project-tagline"></p>
+        </header>
+
+        <div class="gallery-grid" id="p-gallery">
+            <!-- Images will be injected here -->
+        </div>
+
+        <div class="project-content">
+            <div class="details">
+                <h2 class="section-title">Project Overview</h2>
+                <div id="p-overview">
+                    <!-- Overview text -->
+                </div>
+
+                <h2 class="section-title" style="margin-top: 2rem;">Key Details</h2>
+                <ul id="p-features" class="feature-list">
+                    <!-- Features -->
+                </ul>
+
+                <div id="p-demo-container">
+                    <!-- Demo Button -->
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="tech-stack-box">
+                    <h2 class="section-title">Tech Stack</h2>
+                    <div id="p-tech" class="tech-stack-grid">
+                        <!-- Tech pills -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projectsData = {
+            "pentaigen": {
+                title: "PentAiGen – AI Multi-Agent OS",
+                tagline: "Enterprise-grade multi-agent financial intelligence system acting as a personal AI CFO.",
+                images: [
+                    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+                    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                ],
+                overview: `
+                    <p style="color: var(--slate-300); margin-bottom: 1.5rem;">
+                        PentAiGen is an enterprise-grade multi-agent financial system designed to act as a personal AI CFO. The system integrates 12+ specialized AI agents, including Wealth Strategist, Tax Optimizer, and Risk Watchdog, to provide real-time financial insights and automation.
+                    </p>
+                    <p style="color: var(--slate-300);">
+                        By leveraging advanced Large Language Models (LLMs) and the Gemini API, PentAiGen automates 95% of financial analysis tasks, reducing manual data review time by 60%. It features a secure, conversational interface that allows users to interact with their financial data naturally.
+                    </p>
+                `,
+                features: [
+                    "Multi-Agent Architecture: 12+ Specialized agents working in tandem.",
+                    "Real-Time Analytics: Integrated Tiingo API for live stock visualization.",
+                    "Automated Reporting: Generates financial reports with 95% automation.",
+                    "Secure Conversations: API key-based auth for chat interactions.",
+                    "Omnichannel Access: Available on Web, WhatsApp, and Voice."
+                ],
+                tech: ["Python", "Gemini API", "Flask", "MCP", "Vertex AI", "Tiingo API", "ReactJS"],
+                demo: "https://magudeshhmw.github.io/PentAiGen/"
+            },
+            "legal": {
+                title: "Seran IngoiLe – Legal Snapics",
+                tagline: "AI-powered legal assistant for contract analysis using multi-agent reasoning.",
+                images: [
+                    "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+                    "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                    "https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                ],
+                overview: `
+                    <p style="color: var(--slate-300); margin-bottom: 1.5rem;">
+                        Seran IngoiLe is an intelligent legal assistant designed to automate the contract review process. Using multi-agent reasoning, it creates a streamlined workflow for analyzing complex legal documents.
+                    </p>
+                    <p style="color: var(--slate-300);">
+                        The system automates 70% of manual contract review tasks, identifying risks and compliance issues with high accuracy. It includes a clause intelligence engine and a secure Q&A chat interface for attorneys.
+                    </p>
+                `,
+                features: [
+                    "Clause Intelligence: Automatically detects and summarizes key clauses.",
+                    "Risk Detection: Highlights potential risks and non-compliance headers.",
+                    "Compliance Scoring: Rates contracts based on standard legal frameworks.",
+                    "Secure Document Q&A: Ask questions about PDF contracts via chat."
+                ],
+                tech: ["Python", "Llama Index", "LangChain", "Gemini API", "Flask", "MongoDB"],
+                demo: "#"
+            },
+            "chatbot": {
+                title: "AI Chatbot Builder",
+                tagline: "Advanced conversational AI platform with API key-based authentication.",
+                images: [
+                    "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+                    "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                    "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                ],
+                overview: `
+                    <p style="color: var(--slate-300); margin-bottom: 1.5rem;">
+                        The AI Chatbot Builder is a versatile platform allowing customized conversational agents. It prioritizes security and context-awareness to deliver superior user experiences.
+                    </p>
+                    <p style="color: var(--slate-300);">
+                        It features a robust API key authentication system to manage access and usage. The underlying NLP engine ensures that the chatbot understands context and nuance, providing accurate real-time responses.
+                    </p>
+                `,
+                features: [
+                    "API Key Auth: Secure access management for deployments.",
+                    "Context Awareness: Remembers previous turns in conversation.",
+                    "Real-time Responses: Low latency inference.",
+                    "Custom Knowledge Base: Can be trained on specific datasets."
+                ],
+                tech: ["Python", "Gemini API", "NLP", "API Security"],
+                demo: "#"
+            },
+            "stock": {
+                title: "Stock Price Predictor",
+                tagline: "Advanced time-series forecasting system achieving 78% prediction accuracy.",
+                images: [
+                    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+                    "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                ],
+                overview: `
+                    <p style="color: var(--slate-300); margin-bottom: 1.5rem;">
+                        This project is a high-precision stock forecasting tool leveraging Long Short-Term Memory (LSTM) networks and ARIMA models. It is designed to help investors make data-driven decisions.
+                    </p>
+                    <p style="color: var(--slate-300);">
+                        Achieving a 78% prediction accuracy, the system analyzes historical data to forecast future trends. It includes an interactive dashboard for visualizing complex financial time-series data.
+                    </p>
+                `,
+                features: [
+                    "Hybrid Model: Combines LSTM deep learning with ARIMA statistical methods.",
+                    "78% Accuracy: Validated against historical market data.",
+                    "Interactive Dashboard: Visualize trends and predictions.",
+                    "Pattern Recognition: Identifies bullish/bearish signals."
+                ],
+                tech: ["Python", "LSTM", "ARIMA", "Data Visualization", "Pandas"],
+                demo: "#"
+            },
+            "sentiment": {
+                title: "Sentiment Analyzer",
+                tagline: "NLP-powered sentiment analysis tool for product and customer reviews.",
+                images: [
+                    "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+                    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                    "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                ],
+                overview: `
+                    <p style="color: var(--slate-300); margin-bottom: 1.5rem;">
+                        The Sentiment Analyzer is a Natural Language Processing tool built to extract emotional insights from text data. It is particularly effective for analyzing product reviews and customer feedback.
+                    </p>
+                    <p style="color: var(--slate-300);">
+                        Using TF-IDF vectorization and Naive Bayes classification, it categorizes text into positive, negative, or neutral sentiments, providing businesses with actionable data on customer satisfaction.
+                    </p>
+                `,
+                features: [
+                    "TF-IDF Vectorization: Converts text to meaningful numerical features.",
+                    "Naive Bayes Classifier: Efficient and accurate classification.",
+                    "Review Analysis: optimized for e-commerce feedback.",
+                    "Actionable Insights: Summarizes overall customer sentiment."
+                ],
+                tech: ["Python", "NLP", "TF-IDF", "Naive Bayes"],
+                demo: "#"
+            },
+            "ecom": {
+                title: "Sri Sai Cottage Industries",
+                tagline: "Full-stack e-commerce platform for traditional pooja products.",
+                images: [
+                    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+                    "https://images.unsplash.com/photo-1524678606372-565e17461167?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+                    "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                ],
+                overview: `
+                    <p style="color: var(--slate-300); margin-bottom: 1.5rem;">
+                        This full-stack e-commerce solution is built for "Sri Sai Cottage Industries" to sell traditional products online. It brings a traditional business into the digital age.
+                    </p>
+                    <p style="color: var(--slate-300);">
+                        The platform features a responsive modern design, a secure payment gateway, and a comprehensive admin dashboard for product management. It ensures a smooth shopping experience from browsing to checkout.
+                    </p>
+                `,
+                features: [
+                    "Secure Payments: Integrated gateway for safe transactions.",
+                    "Responsive Design: Works seamlessly on mobile and desktop.",
+                    "Product Management: Admin panel for inventory control.",
+                    "Order Tracking: Users can track their shipments."
+                ],
+                tech: ["HTML/CSS", "JavaScript", "Payment Gateway", "E-commerce"],
+                demo: "#"
+            }
+        };
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        window.onload = function () {
+            const projectId = getQueryParam('id') || 'pentaigen'; // Default to pentaigen
+            const project = projectsData[projectId];
+
+            if (project) {
+                document.title = project.title + " - Project Details | Magudeshwaran";
+                document.querySelector('meta[name="description"]').setAttribute("content", project.tagline);
+                document.getElementById('p-title').textContent = project.title;
+                document.getElementById('p-tagline').textContent = project.tagline;
+                document.getElementById('p-overview').innerHTML = project.overview;
+
+                // Tech Stack
+                const techContainer = document.getElementById('p-tech');
+                techContainer.innerHTML = project.tech.map(t => `<span class="tech-pill">${t}</span>`).join('');
+
+                // Features
+                const featContainer = document.getElementById('p-features');
+                featContainer.innerHTML = project.features.map(f => `<li>${f}</li>`).join('');
+
+                // Gallery
+                const galleryContainer = document.getElementById('p-gallery');
+                // Use first image as main, next two as secondary
+                let galleryHTML = `
+                    <div class="gallery-item main-img">
+                        <img src="${project.images[0]}" alt="${project.title} Main">
+                    </div>
+                `;
+                if (project.images[1]) {
+                    galleryHTML += `
+                        <div class="gallery-item">
+                            <img src="${project.images[1]}" alt="${project.title} Detail 1">
+                        </div>
+                    `;
+                }
+                if (project.images[2]) {
+                    galleryHTML += `
+                        <div class="gallery-item">
+                            <img src="${project.images[2]}" alt="${project.title} Detail 2">
+                        </div>
+                    `;
+                }
+                galleryContainer.innerHTML = galleryHTML;
+
+                // Demo Button
+                // Demo Button
+                if (project.demo) {
+                    document.getElementById('p-demo-container').innerHTML = `
+                        <a href="${project.demo}" target="_blank" class="btn">
+                            <i class="fas fa-external-link-alt"></i> View Live Demo
+                        </a>
+                    `;
+                }
+            } else {
+                document.getElementById('p-title').textContent = "Project Not Found";
+            }
+        };
+    </script>
+</body>
+
+</html>

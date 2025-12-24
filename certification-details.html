@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="me.jpg">
+    <title>Certification Details - Magudeshwaran (HMW)</title>
+    <meta name="description" content="View details of this certification/achievement earned by Magudeshwaran.">
+    <meta name="robots" content="index, follow">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-500: #06b6d4;
+            --primary-600: #0891b2;
+            --primary-400: #22d3ee;
+            --secondary-500: #f59e0b;
+            --secondary-600: #d97706;
+            --secondary-400: #fbbf24;
+            --slate-950: #020617;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-300: #cbd5e1;
+            --success-500: #22c55e;
+            --purple-500: #a855f7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--slate-900);
+            background-image: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.1), transparent 70%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Nav */
+        nav {
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-btn {
+            color: var(--slate-300);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--primary-400);
+        }
+
+        /* Header */
+        .cert-header {
+            text-align: center;
+            padding: 1rem 0 2rem;
+            /* Reduced padding */
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            position: relative;
+        }
+
+        /* Logo styles removed as per request */
+
+        .cert-title {
+            font-size: 2.5rem;
+            /* Increased size */
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(to right, #ffffff, #e2e8f0);
+            /* Brighter gradient */
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            /* Subtle glow */
+        }
+
+        .cert-org {
+            font-size: 1.25rem;
+            /* Increased size */
+            color: var(--primary-400);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            height: 500px;
+        }
+
+        .gallery-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            background: var(--slate-900);
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .main-img {
+            grid-row: span 2;
+        }
+
+        /* Body */
+        .cert-body {
+            padding: 1rem 0;
+            /* Adjusted padding */
+        }
+
+        .description {
+            color: var(--slate-300);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            background: rgba(30, 41, 59, 0.3);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .skills-container {
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            color: var(--slate-300);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            /* More spacing between items */
+            margin-bottom: 2.5rem;
+            color: var(--slate-300);
+            /* Brighter color */
+            font-size: 1.1rem;
+            /* Larger text */
+            font-weight: 500;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(30, 41, 59, 0.5);
+            /* Tag-like background */
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .main-img {
+                height: 300px;
+            }
+
+            .cert-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html#achievements" class="back-btn"><i class="fas fa-arrow-left"></i> Back to
+                Achievements</a>
+        </nav>
+
+        <div class="cert-header">
+            <h1 id="c-title" class="cert-title">Loading...</h1>
+            <p id="c-org" class="cert-org"></p>
+
+            <div class="meta-info" style="margin-top: 1rem;">
+                <div class="meta-item"><i class="far fa-calendar-alt"></i> <span id="c-date"></span></div>
+                <div class="meta-item"><i class="fas fa-tag"></i> <span id="c-type"></span></div>
+            </div>
+        </div>
+
+        <div class="cert-body">
+
+            <div id="c-gallery" class="gallery-grid">
+                <!-- Injected JS -->
+            </div>
+
+            <div class="description">
+                <h3 style="color: white; margin-bottom: 1rem;">About this Achievement</h3>
+                <p id="c-desc"></p>
+            </div>
+
+            <div class="skills-container">
+                <h3 style="color: white; margin-bottom: 1rem;">Key Skills & Competencies</h3>
+                <div id="c-skills"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const certData = {
+            "genai": {
+                title: "GenAI Academy 2.0 Graduate",
+                org: "Google Cloud & Hack2Skill",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg",
+                date: "Dec 2025",
+                type: "Certification",
+                icon: "fas fa-graduation-cap",
+                color: "var(--primary-500)",
+                desc: "Graduated from the GenAI Academy 2.0, a comprehensive program on Generative AI, Cloud Agentic AI, and Vertex AI. Mastered the deployment of scalable AI agents on Google Cloud.",
+                skills: ["Generative AI", "Agentic AI", "Vertex AI", "Google Cloud"],
+                images: [
+                    "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+                ]
+            },
+            "kaggle": {
+                title: "5-Day AI Agents Intensive",
+                org: "Google (Kaggle)",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png",
+                date: "Dec 2025",
+                type: "Certification",
+                icon: "fas fa-robot",
+                color: "var(--primary-500)",
+                desc: "Completed an intensive practical course on building AI Agents. Covered multi-agent orchestration, reasoning loops, and advanced tool use with LLMs.",
+                skills: ["AI Agents", "Agentic Workflows", "Python", "Kaggle"],
+                images: [
+                    "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+                ]
+            },
+            "agentic_hack": {
+                title: "Google Cloud Agentic AI Day – Finalist",
+                org: "Hack2Skill & Google Cloud",
+                logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+                date: "Sep 2025",
+                type: "Hackathon Finalist",
+                icon: "fas fa-trophy",
+                color: "var(--secondary-500)",
+                desc: "Achieved Finalist status in the Google Cloud Agentic AI Day Hackathon. Built an innovative agentic solution using Gemini and Vertex AI under tight deadlines.",
+                skills: ["Hackathon", "Gemini API", "Rapid Prototyping", "Teamwork"],
+                images: [
+                    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+                ]
+            },
+            "startup_school": {
+                title: "Startup School: Prompt to Prototype",
+                org: "Google for Startups",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+                date: "Dec 2025",
+                type: "Certification",
+                icon: "fas fa-rocket",
+                color: "#a855f7",
+                desc: "Completed Google's Startup School program focused on rapid prototyping using GenAI. Learned to translate prompts into functional prototypes and product MVPs.",
+                skills: ["Product Design", "Prompt Engineering", "Prototyping", "Startup Mindset"],
+                images: [
+                    "https://images.unsplash.com/photo-1559136555-930d72f1d3e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+                ]
+            },
+            "nptel_llm": {
+                title: "Introduction to Large Language Models",
+                org: "NPTEL & IIT Madras",
+                logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/IIT_Madras_Logo.svg/1200px-IIT_Madras_Logo.svg.png",
+                date: "Oct 2025",
+                type: "Academic Certification",
+                icon: "fas fa-university",
+                color: "#94a3b8",
+                desc: "Completed a rigorous academic course on LLM architecture, training methodologies, and fine-tuning techniques from IIT Madras via NPTEL.",
+                skills: ["LLM Architecture", "NLP", "Fine-Tuning", "Transformers"],
+                images: []
+            },
+            "abe_intern": {
+                title: "Machine Learning Internship",
+                org: "ABE Intelligence Group",
+                logo: "",
+                date: "Aug 2024",
+                type: "Internship",
+                icon: "fas fa-briefcase",
+                color: "#22c55e",
+                desc: "Worked as a Machine Learning Intern, contributing to real-world ML pipelines and data analysis projects. Gained hands-on experience in industry workflows.",
+                skills: ["Machine Learning", "Data Analysis", "Python", "Industry Experience"],
+                images: []
+            }
+        };
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        window.onload = function () {
+            const certId = getQueryParam('id') || 'genai';
+            const data = certData[certId];
+
+            if (data) {
+                document.title = data.title + " - Certification | Magudeshwaran";
+                document.querySelector('meta[name="description"]').setAttribute("content", data.desc);
+                document.getElementById('c-title').textContent = data.title;
+                document.getElementById('c-org').textContent = data.org;
+                document.getElementById('c-date').textContent = data.date;
+                document.getElementById('c-type').textContent = data.type;
+                document.getElementById('c-desc').textContent = data.desc;
+
+                // Logo Logic Removed
+
+                // Skills
+                document.getElementById('c-skills').innerHTML = data.skills.map(s => `<span class="skill-tag">${s}</span>`).join('');
+
+                // Image Gallery Logic
+                const galleryContainer = document.getElementById('c-gallery');
+
+                if (data.images && data.images.length > 0) {
+                    let galleryHTML = `
+                        <div class="gallery-item main-img">
+                            <img src="${data.images[0]}" alt="${data.title} Main">
+                        </div>
+                    `;
+                    // Add secondary images if they exist
+                    if (data.images[1]) {
+                        galleryHTML += `
+                            <div class="gallery-item">
+                                <img src="${data.images[1]}" alt="Detail 1">
+                            </div>
+                        `;
+                    }
+                    if (data.images[2]) {
+                        galleryHTML += `
+                            <div class="gallery-item">
+                                <img src="${data.images[2]}" alt="Detail 2">
+                            </div>
+                        `;
+                    }
+                    galleryContainer.innerHTML = galleryHTML;
+                } else {
+                    galleryContainer.innerHTML = `<p style="text-align:center; color: var(--slate-400); grid-column: 1/-1;">No images available for this achievement.</p>`;
+                }
+
+            } else {
+                document.getElementById('c-title').textContent = "Not Found";
+            }
+        };
+    </script>
+</body>
+
+</html>
